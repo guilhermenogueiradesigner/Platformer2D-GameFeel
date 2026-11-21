@@ -14,6 +14,17 @@ Jack, a pumpkin-headed ninja, fell into the sewer and needs to escape. A short 2
 - Game feel for 2D platformer movement
 - Onboarding and flow
 
+## Architecture
+
+Code lives in `Assets/_Project/Scripts/`, one assembly per module:
+
+| Module | Content |
+| --- | --- |
+| `JackODrain.Core` | Small reusable pieces (`Countdown`, `PixelGrid`) |
+| `JackODrain.Player` | Movement: settings, input, collision sensing and the movement rules |
+
+Movement uses a dynamic `Rigidbody2D` with custom gravity. Jumps are defined by height in tiles and time to apex, so level metrics and code use the same numbers. All tuning values live in a `MovementSettings` asset. Pure logic is covered by EditMode tests in `Assets/_Project/Tests/`. Design reasoning: [docs/decisions/0018](docs/decisions/0018-arquitetura-do-movimento.md).
+
 ## How to run
 
 1. Install Unity 6000.3.23f1 through Unity Hub.
