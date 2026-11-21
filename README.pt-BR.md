@@ -1,6 +1,6 @@
-# Projeto 2: Fase de plataforma 2D
+# MAX
 
-Uma fase 2D curta que ensina um pacote completo de movimentação (pulo duplo, dash, gancho e grudar na parede) **sem texto de tutorial**, só com o espaço, a luz e a ordem dos desafios.
+Max, um gato preto, caiu no esgoto e precisa fugir. Uma fase 2D curta que ensina um pacote completo de movimentação (pulo duplo, dash, gancho e grudar na parede) **sem texto de tutorial**, só com o espaço, a luz e a ordem dos desafios.
 
 [English](README.md)
 
@@ -17,8 +17,13 @@ Uma fase 2D curta que ensina um pacote completo de movimentação (pulo duplo, d
 ## Como rodar
 
 1. Instale a Unity 6000.3.23f1 pelo Unity Hub.
-2. Abra esta pasta como projeto.
-3. Abra a cena principal em `Assets/_Project/Scenes/`.
+2. Adquira o pacote [SHADOW Series](https://escape-pixel.itch.io/shadow-series-full-bundle), de Escape Pixell, e coloque os arquivos em `Assets/ThirdParty/EscapePixel/`. O pacote é pago e os arquivos não são redistribuídos aqui. Sem ele, o projeto abre, mas os sprites aparecem faltando.
+3. Abra esta pasta como projeto.
+4. Abra a cena principal em `Assets/_Project/Scenes/`.
+
+## Créditos
+
+Os assets de terceiros estão listados em [docs/creditos.md](docs/creditos.md).
 
 ## Documentação
 

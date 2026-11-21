@@ -1,6 +1,6 @@
-# Project 2: 2D Platformer Level
+# MAX
 
-A short 2D level that teaches a full movement kit (double jump, dash, grappling hook and wall cling) **without tutorial text**, using only space, light and the order of challenges.
+Max, a black cat, fell into the sewer and needs to escape. A short 2D level that teaches a full movement kit (double jump, dash, grappling hook and wall cling) **without tutorial text**, using only space, light and the order of challenges.
 
 [Português](README.pt-BR.md)
 
@@ -17,8 +17,13 @@ A short 2D level that teaches a full movement kit (double jump, dash, grappling 
 ## How to run
 
 1. Install Unity 6000.3.23f1 through Unity Hub.
-2. Open this folder as a project.
-3. Open the main scene in `Assets/_Project/Scenes/`.
+2. Get the [SHADOW Series](https://escape-pixel.itch.io/shadow-series-full-bundle) pack by Escape Pixell and place the files in `Assets/ThirdParty/EscapePixel/`. The pack is paid and its files are not redistributed here. Without it, the project opens but the sprites are missing.
+3. Open this folder as a project.
+4. Open the main scene in `Assets/_Project/Scenes/`.
+
+## Credits
+
+Third-party assets are listed in [docs/creditos.md](docs/creditos.md).
 
 ## Documentation
 

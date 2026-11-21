@@ -44,3 +44,6 @@ mono_crash.*
 .DS_Store
 Thumbs.db
 desktop.ini
+
+/Assets/ThirdParty/
+/Assets/ThirdParty.meta
