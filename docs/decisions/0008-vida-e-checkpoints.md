@@ -4,7 +4,7 @@
 
 ## Contexto
 
-Não há inimigos, só armadilhas. Era preciso definir o que acontece quando o Max toma dano, porque isso define o custo do erro e o quanto o jogador arrisca.
+Não há inimigos, só armadilhas. Era preciso definir o que acontece quando o Jack toma dano, porque isso define o custo do erro e o quanto o jogador arrisca.
 
 ## Opções consideradas
 
@@ -16,8 +16,8 @@ Não há inimigos, só armadilhas. Era preciso definir o que acontece quando o M
 | Regra | Valor |
 | --- | --- |
 | Vida | **5 corações** |
-| Dano | Cada armadilha tira um coração, e o Max volta ao **último chão seguro** |
-| Sem corações | O Max volta ao **checkpoint da área** |
+| Dano | Cada armadilha tira um coração, e o Jack volta ao **último chão seguro** |
+| Sem corações | O Jack volta ao **checkpoint da área** |
 | No checkpoint | Os corações voltam ao máximo |
 
 ## Por quê
@@ -32,6 +32,6 @@ Resetar os corações no checkpoint faz cada área começar do mesmo jeito, e a 
 
 - A UI mínima mostra os 5 corações.
 - Cada área tem um checkpoint claro, sinalizado sem texto.
-- **Chão seguro:** a posição do Max é salva sempre que ele está em cima de uma plataforma. Ao tomar dano, ele volta à última posição salva.
-- **Invulnerabilidade ao reaparecer:** o Max fica um instante sem receber dano, para o jogador se situar.
-- **A observar nos playtests:** se o Max pisar na borda de uma plataforma ao lado de uma armadilha, ele pode reaparecer perto do perigo. A invulnerabilidade cobre esse caso; se o playtest mostrar que não basta, a regra é revista.
+- **Chão seguro:** a posição do Jack é salva sempre que ele está em cima de uma plataforma. Ao tomar dano, ele volta à última posição salva.
+- **Invulnerabilidade ao reaparecer:** o Jack fica um instante sem receber dano, para o jogador se situar.
+- **A observar nos playtests:** se o Jack pisar na borda de uma plataforma ao lado de uma armadilha, ele pode reaparecer perto do perigo. A invulnerabilidade cobre esse caso; se o playtest mostrar que não basta, a regra é revista.

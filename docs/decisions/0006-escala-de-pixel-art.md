@@ -17,15 +17,15 @@ Os sprites são desenhados à mão no Aseprite. Antes do primeiro desenho é pre
 | Item | Valor |
 | --- | --- |
 | Tile | 16×16 px |
-| Canvas de cada quadro do Max | 32×32 px |
-| Altura do Max no quadro | cerca de 24 px (1,5 tile) |
+| Canvas de cada quadro do Jack | 32×32 px |
+| Altura do Jack no quadro | cerca de 24 px (1,5 tile) |
 | Pixels Per Unit | 16 (1 tile = 1 unidade da Unity) |
 | Resolução de referência | 480×270 |
 
 ## Por quê
 
 - O tile de 16 px é legível e cabe no prazo.
-- O Max com 1,5 tile de altura deixa claro para o jogador o tamanho dos vãos: uma passagem de 2 tiles é "apertada, mas cabe".
+- O Jack com 1,5 tile de altura deixa claro para o jogador o tamanho dos vãos: uma passagem de 2 tiles é "apertada, mas cabe".
 - O canvas de 32 px dá espaço para as poses que se esticam (gancho, dash, parede) sem mudar o pivô entre quadros.
 - Com Pixels Per Unit 16, os valores de ajuste ficam em tiles: "pulo de 3 unidades" é "pulo de 3 tiles".
 - 480×270 multiplica exato para 1080p (×4) e 4K (×8), sem pixels borrados.
@@ -34,4 +34,4 @@ Os sprites são desenhados à mão no Aseprite. Antes do primeiro desenho é pre
 
 - A câmera usa o Pixel Perfect Camera do URP com a resolução de referência acima.
 - Os sprites são importados com filtro `Point`, sem compressão, e pivô em "Bottom Center".
-- Como o Max tem estilo pequeno e quadradinho, ele pode ficar abaixo de 24 px de altura. O limite do canvas continua 32×32.
+- Como o Jack tem estilo pequeno e quadradinho, ele pode ficar abaixo de 24 px de altura. O limite do canvas continua 32×32.

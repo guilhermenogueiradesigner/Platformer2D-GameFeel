@@ -9,8 +9,8 @@ A decisão 0005 previa sprites desenhados do zero. O objetivo do projeto é prov
 ## Opções consideradas
 
 - **Arte própria do zero:** projeto mais autoral, mas o maior risco de escopo.
-- **Assets prontos, sem edição:** mais rápido, mas o visual fica genérico e pode não casar com o Max.
-- **Assets prontos, editados no Aseprite:** o tempo vai para o que o projeto precisa provar, e a edição adapta o visual ao Max e ao esgoto.
+- **Assets prontos, sem edição:** mais rápido, mas o visual fica genérico e pode não casar com o Jack.
+- **Assets prontos, editados no Aseprite:** o tempo vai para o que o projeto precisa provar, e a edição adapta o visual ao Jack e ao esgoto.
 
 ## Decisão
 
@@ -18,7 +18,7 @@ Usar **assets prontos** e editá-los no **Aseprite** quando precisar. A escala d
 
 ## Por quê
 
-O foco do portfólio é o design da fase e a sensação do controle. Assets prontos liberam tempo para iterar nos playtests, que é onde está o valor do projeto. A edição no Aseprite mantém a identidade do Max.
+O foco do portfólio é o design da fase e a sensação do controle. Assets prontos liberam tempo para iterar nos playtests, que é onde está o valor do projeto. A edição no Aseprite mantém a identidade do Jack.
 
 ## Consequências
 

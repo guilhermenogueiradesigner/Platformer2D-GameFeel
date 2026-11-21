@@ -24,4 +24,4 @@ Um coletável é uma recompensa clara, visível de longe, e funciona como isca: 
 
 - O one-pager passa a incluir coletáveis simples. Continuam fora do escopo lojas, upgrades e qualquer sistema que use os coletáveis.
 - A UI mínima mostra a contagem de coletáveis.
-- **Em aberto (GDD):** o que é o coletável no mundo do Max, quantos existem e se o total aparece na tela de fim.
+- **Em aberto (GDD):** o que é o coletável no mundo do Jack, quantos existem e se o total aparece na tela de fim.

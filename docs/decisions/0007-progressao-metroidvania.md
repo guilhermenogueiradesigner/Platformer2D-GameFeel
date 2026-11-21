@@ -4,7 +4,7 @@
 
 ## Contexto
 
-A fase apresenta quatro mecânicas em ordem. Era preciso decidir se o Max já tem todas desde o início ou se as ganha aos poucos, e se o mapa é um caminho linear ou permite voltar.
+A fase apresenta quatro mecânicas em ordem. Era preciso decidir se o Jack já tem todas desde o início ou se as ganha aos poucos, e se o mapa é um caminho linear ou permite voltar.
 
 ## Opções consideradas
 
@@ -14,9 +14,9 @@ A fase apresenta quatro mecânicas em ordem. Era preciso decidir se o Max já te
 
 ## Decisão
 
-O Max **ganha as mecânicas aos poucos**, na ordem da decisão 0003. O mapa **permite voltar** a áreas que antes não podiam ser alcançadas sem a habilidade certa.
+O Jack **ganha as mecânicas aos poucos**, na ordem da decisão 0003. O mapa **permite voltar** a áreas que antes não podiam ser alcançadas sem a habilidade certa.
 
-O Max é um **gato ninja**: anda em pé e tem estilo pequeno e quadradinho, mais que humanoide. Ser ninja justifica o gancho dentro do mundo.
+O personagem é um **ninja**, de estilo pequeno e quadradinho. Ser ninja justifica o gancho dentro do mundo. (A primeira versão era um gato ninja; a identidade atual está na decisão [0011](0011-nome-e-personagem.md).)
 
 ## Por quê
 

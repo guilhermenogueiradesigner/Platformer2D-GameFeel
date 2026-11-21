@@ -1,6 +1,6 @@
-# MAX
+# JACK O'DRAIN
 
-Max, a black cat, fell into the sewer and needs to escape. A short 2D level that teaches a full movement kit (double jump, dash, grappling hook and wall cling) **without tutorial text**, using only space, light and the order of challenges.
+Jack, a pumpkin-headed ninja, fell into the sewer and needs to escape. A short 2D level that teaches a full movement kit (double jump, dash, grappling hook and wall cling) **without tutorial text**, using only space, light and the order of challenges.
 
 [Português](README.pt-BR.md)
 

@@ -1,6 +1,6 @@
-# MAX
+# JACK O'DRAIN
 
-**Em uma frase:** Max, um gato preto ninja, caiu no esgoto e precisa fugir, ganhando novos movimentos pelo caminho.
+**Em uma frase:** Jack, um ninja com cabeça de abóbora, caiu no esgoto e precisa fugir, ganhando novos movimentos pelo caminho.
 **O que este projeto prova:** level design que ensina sem texto, game feel e onboarding.
 **Público:** fãs de plataforma de precisão e de metroidvania.
 **Plataforma e duração:** PC (WebGL no itch.io) · 5 a 10 minutos.
@@ -14,17 +14,17 @@
 
 ## Personagem
 
-Max é um gato preto ninja que anda em pé. O estilo é pequeno e quadradinho, mais que humanoide. Ser ninja explica as habilidades, inclusive o gancho.
+Um ninja com cabeça de abóbora, de estilo pequeno e quadradinho. Ser ninja explica as habilidades, inclusive o gancho. A cabeça brilha e ilumina o esgoto escuro, e essa luz guia o jogador. O sprite vem do pacote SHADOW Series, editado no Aseprite.
 
 ## Experiência do jogador
 
-O jogador começa no fundo do esgoto e ganha as habilidades aos poucos: pulo duplo, grudar na parede, dash em 8 direções e gancho. Cada habilidade nova abre caminho adiante e também permite voltar a lugares que antes estavam fora de alcance. No fim, a saída só é alcançada combinando tudo. A sensação final é de domínio: o jogador pode se mover como quiser, com controle total do Max.
+O jogador começa no fundo do esgoto e ganha as habilidades aos poucos: pulo duplo, grudar na parede, dash em 8 direções e gancho. Cada habilidade nova abre caminho adiante e também permite voltar a lugares que antes estavam fora de alcance. No fim, a saída só é alcançada combinando tudo. A sensação final é de domínio: o jogador pode se mover como quiser, com controle total do Jack.
 
 ## Regras principais
 
 - **Progressão:** cada habilidade é ganha em um ponto da fase, na ordem abaixo.
-- **Coletáveis:** itens simples escondidos nas áreas de retorno, como recompensa pela exploração.
-- **Vida:** o Max tem 5 corações. Cada armadilha tira um coração e o leva de volta ao último chão seguro. Sem corações, ele volta ao checkpoint da área, onde os corações voltam ao máximo.
+- **Coletáveis:** 5 velas escondidas nas áreas de retorno. Cada uma deixa a cabeça do Jack um pouco mais brilhante.
+- **Vida:** o Jack tem 5 corações. Cada armadilha tira um coração e o leva de volta ao último chão seguro. Sem corações, ele volta ao checkpoint da área, onde os corações voltam ao máximo.
 
 ## Mecânicas
 
@@ -39,6 +39,6 @@ Detalhes e motivos em [decisions/](decisions/).
 
 ## Fora do escopo
 
-- Inimigos e sistema de combate. Só armadilhas causam dano ao Max.
+- Inimigos e sistema de combate. Só armadilhas causam dano ao Jack.
 - Texto de tutorial, diálogos e narrativa além da premissa.
 - Lojas, upgrades e qualquer sistema que use os coletáveis. Eles existem só como recompensa.

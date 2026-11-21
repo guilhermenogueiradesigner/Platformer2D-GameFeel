@@ -1,6 +1,6 @@
-# MAX
+# JACK O'DRAIN
 
-Max, um gato preto, caiu no esgoto e precisa fugir. Uma fase 2D curta que ensina um pacote completo de movimentação (pulo duplo, dash, gancho e grudar na parede) **sem texto de tutorial**, só com o espaço, a luz e a ordem dos desafios.
+Jack, um ninja com cabeça de abóbora, caiu no esgoto e precisa fugir. Uma fase 2D curta que ensina um pacote completo de movimentação (pulo duplo, dash, gancho e grudar na parede) **sem texto de tutorial**, só com o espaço, a luz e a ordem dos desafios.
 
 [English](README.md)
 

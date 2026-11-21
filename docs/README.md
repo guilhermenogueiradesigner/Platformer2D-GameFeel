@@ -6,9 +6,9 @@ Ordem de leitura sugerida: one-pager → GDD → mapa da fase. Decisões, devlog
 
 | Documento | Conteúdo | Etapa | Estado |
 | --- | --- | --- | --- |
-| [01-one-pager.md](01-one-pager.md) | Conceito, público, pilares de design | 1 | Escrito |
-| `02-gdd.md` | Mecânicas, fluxo da fase, escopo | 2 | A fazer |
-| `03-mapa-da-fase.md` | Mapa anotado, blockout e versão final lado a lado | 3 | A fazer |
+| [01-one-pager.md](01-one-pager.md) | Conceito, público, pilares de design | 1 | Aprovado |
+| [02-gdd.md](02-gdd.md) | Mecânicas, fluxo da fase, escopo | 2 | Aprovado |
+| [03-mapa-da-fase.md](03-mapa-da-fase.md) | Métricas de movimento, mapa anotado, blockout e versão final | 3 | Rascunho |
 
 Cada documento ganha link aqui quando for escrito.
 
@@ -36,6 +36,13 @@ Cada documento ganha link aqui quando for escrito.
 | [0008](decisions/0008-vida-e-checkpoints.md) | Vida em corações e checkpoints por área | 2026-11-21 |
 | [0009](decisions/0009-coletaveis-como-recompensa.md) | Coletáveis simples como recompensa do retorno | 2026-11-21 |
 | [0010](decisions/0010-assets-prontos.md) | Arte com assets prontos, editados no Aseprite | 2026-11-21 |
+| [0011](decisions/0011-nome-e-personagem.md) | Nome do jogo e personagem | 2026-11-21 |
+| [0012](decisions/0012-luz-e-linguagem-visual.md) | Cabeça que brilha e linguagem visual do esgoto | 2026-11-21 |
+| [0013](decisions/0013-como-ganhar-habilidades.md) | Como o Jack ganha cada habilidade | 2026-11-21 |
+| [0014](decisions/0014-armadilhas.md) | Armadilhas | 2026-11-21 |
+| [0015](decisions/0015-velas-como-coletaveis.md) | Velas como coletáveis | 2026-11-21 |
+| [0016](decisions/0016-ajustes-das-mecanicas.md) | Ajustes das mecânicas, controles e câmera | 2026-11-21 |
+| [0017](decisions/0017-interface-e-audio.md) | Interface, menus e áudio | 2026-11-21 |
 
 ## Devlog
 
