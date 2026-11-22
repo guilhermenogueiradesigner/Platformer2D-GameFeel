@@ -24,7 +24,8 @@ Uma fase de plataforma 2D de 5 a 10 minutos. Jack, um ninja com cabeça de abób
 
 | Animação | Estado |
 | --- | --- |
-| idle, run, jump, fall, hit | Existem no pacote |
+| idle, run, jump, fall | No jogo, escolhidas pelo `PlayerAnimator` (decisão 0020) |
+| hit | Existe no pacote |
 | idle-up | Existe no pacote; serve de pose de mira para cima |
 | double-jump, wall-cling, dash, grapple-pull, grapple-swing | A fazer, editando quadros do pacote |
 | pose de pegar pergaminho | A fazer |
@@ -179,10 +180,11 @@ Decisão 0017.
 
 ## 11. Câmera
 
-Decisões 0006 e 0016.
+Decisões 0006 e 0020.
 
 - Pixel Perfect Camera com resolução de referência 480×270.
-- Cinemachine segue o Jack com suavização e um pequeno avanço na direção do movimento, também na vertical.
+- Câmera própria: olha 2 tiles à frente da direção do Jack e segura a altura do último chão durante o pulo, acomodando com suavidade no pouso.
+- Subidas grandes e quedas são acompanhadas no ar.
 - Cada área tem limites próprios de câmera.
 
 ---

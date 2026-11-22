@@ -24,6 +24,7 @@ namespace JackODrain.Player
         private bool _hasAirJump;
 
         public bool IsGrounded => _isGrounded;
+        public int FacingDirection { get; private set; } = 1;
         public Vector2 Velocity => _rigidbody.linearVelocity;
 
         private void Awake()
@@ -55,6 +56,7 @@ namespace JackODrain.Player
 
             TickTimers(deltaTime);
             UpdateGroundedState(velocity.y);
+            UpdateFacingDirection();
 
             velocity.x = NextHorizontalSpeed(velocity.x, deltaTime);
             velocity.y = NextVerticalSpeed(velocity.y, deltaTime);
@@ -90,6 +92,14 @@ namespace JackODrain.Player
 
             if (wasGrounded && !_isGrounded)
                 _coyoteTime.Start(_settings.CoyoteTime);
+        }
+
+        private void UpdateFacingDirection()
+        {
+            float horizontalInput = _input.Move.x;
+
+            if (Mathf.Abs(horizontalInput) > InputDeadZone)
+                FacingDirection = horizontalInput > 0f ? 1 : -1;
         }
 
         private float NextHorizontalSpeed(float horizontalSpeed, float deltaTime)

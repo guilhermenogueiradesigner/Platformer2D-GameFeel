@@ -1,6 +1,6 @@
 # 0016. Ajustes das mecânicas, controles e câmera
 
-**Data:** 2026-11-21 · **Status:** aceita
+**Data:** 2026-11-21 · **Status:** aceita; o uso de Cinemachine foi substituído pela decisão [0020](0020-camera-e-animacoes.md)
 
 ## Contexto
 

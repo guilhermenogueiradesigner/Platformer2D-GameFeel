@@ -45,6 +45,7 @@ Cada documento ganha link aqui quando for escrito.
 | [0017](decisions/0017-interface-e-audio.md) | Interface, menus e áudio | 2026-11-21 |
 | [0018](decisions/0018-arquitetura-do-movimento.md) | Arquitetura do movimento | 2026-11-21 |
 | [0019](decisions/0019-habilidades-vida-e-respawn-no-codigo.md) | Habilidades, vida e respawn no código | 2026-11-21 |
+| [0020](decisions/0020-camera-e-animacoes.md) | Câmera de plataforma e animações do Jack | 2026-11-21 |
 
 ## Devlog
 
