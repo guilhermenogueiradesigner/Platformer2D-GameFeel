@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1520" width="1100" height="1520" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ffd166"/>
+    </marker>
+    <g id="lamp">
+      <rect x="-3" y="-16" width="6" height="16" fill="#8a6a45"/>
+      <circle cx="0" cy="-20" r="6" fill="#ffb347"/>
+      <circle cx="0" cy="-20" r="12" fill="#ffb347" opacity="0.25"/>
+    </g>
+    <g id="scroll">
+      <rect x="-12" y="-9" width="24" height="12" rx="3" fill="#e8dfc0"/>
+      <line x1="-7" y1="-3" x2="7" y2="-3" stroke="#8a7a50" stroke-width="2"/>
+      <circle cx="0" cy="-3" r="16" fill="#bcd4ff" opacity="0.2"/>
+    </g>
+    <g id="candle">
+      <rect x="-3" y="-12" width="6" height="12" fill="#ffe08a"/>
+      <circle cx="0" cy="-16" r="3.5" fill="#ffcf40"/>
+      <circle cx="0" cy="-14" r="10" fill="#ffe08a" opacity="0.25"/>
+    </g>
+    <g id="spikes">
+      <polygon points="0,0 6,-10 12,0 18,-10 24,0 30,-10 36,0" fill="#e05050"/>
+    </g>
+    <g id="steam">
+      <circle cx="0" cy="-8" r="6" fill="#e8eef5" opacity="0.7"/>
+      <circle cx="5" cy="-18" r="7" fill="#e8eef5" opacity="0.5"/>
+      <circle cx="-3" cy="-28" r="8" fill="#e8eef5" opacity="0.3"/>
+    </g>
+    <pattern id="metal" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#6b7480"/>
+      <rect width="3" height="8" fill="#9aa3ad"/>
+    </pattern>
+  </defs>
+
+  <rect width="1100" height="1520" fill="#15181c"/>
+
+  <text x="550" y="34" text-anchor="middle" font-size="24" font-weight="700" fill="#f2f4f6">JACK O'DRAIN · mapa geral da fase</text>
+  <text x="550" y="58" text-anchor="middle" font-size="14" fill="#9aa3ad">Vista lateral esquemática, fora de escala. O Jack cai até o fundo e sobe de volta: do escuro para a luz.</text>
+
+  <rect x="36" y="96" width="70" height="1240" rx="6" fill="#1d2126" stroke="#3a4048"/>
+  <rect x="46" y="76" width="50" height="14" rx="3" fill="#3a4048"/>
+  <text x="71" y="72" text-anchor="middle" font-size="13" font-weight="700" fill="#f2f4f6">ENTRADA</text>
+  <text x="71" y="700" text-anchor="middle" font-size="14" fill="#9aa3ad" transform="rotate(-90 71 700)">queda pelo bueiro</text>
+  <line x1="71" y1="110" x2="71" y2="560" stroke="#9aa3ad" stroke-width="2" stroke-dasharray="6 6"/>
+  <line x1="71" y1="840" x2="71" y2="1270" stroke="#9aa3ad" stroke-width="2" stroke-dasharray="6 6" marker-end="url(#arrow)"/>
+
+  <rect x="740" y="96" width="320" height="584" rx="10" fill="#22262c" stroke="#ffd166" stroke-width="2"/>
+  <rect x="860" y="76" width="80" height="14" rx="3" fill="#ffd166"/>
+  <circle cx="900" cy="60" r="14" fill="#ffe9a8"/>
+  <circle cx="900" cy="60" r="34" fill="#ffe9a8" opacity="0.15"/>
+  <text x="975" y="66" font-size="13" font-weight="700" fill="#ffd166">SAÍDA</text>
+  <text x="760" y="124" font-size="18" font-weight="700" fill="#ffd166">5 · SAÍDA</text>
+  <text x="760" y="144" font-size="13" fill="#9aa3ad">desafio final</text>
+  <text x="760" y="176" font-size="13" fill="#d7dbe0">Subida até o bueiro combinando</text>
+  <text x="760" y="194" font-size="13" fill="#d7dbe0">as 4 habilidades, com espinhos,</text>
+  <text x="760" y="212" font-size="13" fill="#d7dbe0">água e vapor.</text>
+  <text x="760" y="236" font-size="13" fill="#d7dbe0">Feita para ser vencida em</text>
+  <text x="760" y="254" font-size="13" fill="#d7dbe0">fluxo contínuo, sem parar.</text>
+  <rect x="770" y="600" width="60" height="8" fill="#8d7a66"/>
+  <rect x="860" y="520" width="50" height="8" fill="#8d7a66"/>
+  <rect x="790" y="440" width="50" height="8" fill="url(#metal)"/>
+  <rect x="940" y="400" width="60" height="8" fill="#8d7a66"/>
+  <rect x="850" y="320" width="50" height="8" fill="#8d7a66"/>
+  <rect x="1040" y="280" width="10" height="120" fill="#8d7a66"/>
+  <use href="#spikes" x="950" y="400"/>
+  <use href="#steam" x="800" y="520"/>
+  <rect x="900" y="590" width="120" height="12" fill="#4caf50" opacity="0.7"/>
+  <use href="#lamp" x="770" y="664"/>
+  <text x="790" y="660" font-size="12" fill="#9aa3ad">lamparina</text>
+
+  <rect x="130" y="420" width="580" height="260" rx="10" fill="#22262c" stroke="#5fd3c4" stroke-width="2"/>
+  <rect x="150" y="430" width="70" height="10" fill="#8d7a66"/>
+  <rect x="230" y="430" width="70" height="10" fill="url(#metal)"/>
+  <rect x="310" y="430" width="60" height="10" fill="#8d7a66"/>
+  <rect x="380" y="430" width="80" height="10" fill="url(#metal)"/>
+  <rect x="470" y="430" width="70" height="10" fill="#8d7a66"/>
+  <text x="150" y="468" font-size="18" font-weight="700" fill="#5fd3c4">4 · GALERIA DO GANCHO</text>
+  <text x="150" y="488" font-size="13" fill="#9aa3ad">habilidade: gancho</text>
+  <text x="150" y="520" font-size="13" fill="#d7dbe0">A · altar na borda do primeiro abismo</text>
+  <text x="150" y="540" font-size="13" fill="#d7dbe0">P · teto de pedra baixo sobre abismo seco</text>
+  <text x="150" y="560" font-size="13" fill="#d7dbe0">V · tetos alternando pedra e metal</text>
+  <text x="150" y="580" font-size="13" fill="#d7dbe0">V · balanço em sequência sobre água tóxica</text>
+  <rect x="400" y="650" width="230" height="14" fill="#4caf50" opacity="0.7"/>
+  <use href="#scroll" x="200" y="660"/>
+  <use href="#lamp" x="160" y="664"/>
+  <use href="#candle" x="670" y="470"/>
+  <text x="600" y="498" font-size="12" fill="#ffe08a">vela 4</text>
+  <text x="560" y="514" font-size="11" fill="#9aa3ad">gancho + parede</text>
+
+  <rect x="300" y="720" width="540" height="200" rx="10" fill="#22262c" stroke="#ff9f5a" stroke-width="2"/>
+  <text x="320" y="748" font-size="18" font-weight="700" fill="#ff9f5a">3 · CANAL DO VAPOR</text>
+  <text x="320" y="768" font-size="13" fill="#9aa3ad">habilidade: dash</text>
+  <text x="320" y="800" font-size="13" fill="#d7dbe0">A · altar antes do primeiro vão</text>
+  <text x="320" y="820" font-size="13" fill="#d7dbe0">P · vão de 6 tiles sobre piso seco</text>
+  <text x="320" y="840" font-size="13" fill="#d7dbe0">V · dash diagonal, vapor em ritmo,</text>
+  <text x="320" y="858" font-size="13" fill="#d7dbe0">     vão de 10 tiles (pulo duplo + dash)</text>
+  <use href="#steam" x="620" y="905"/>
+  <use href="#steam" x="670" y="905"/>
+  <use href="#scroll" x="788" y="905"/>
+  <use href="#lamp" x="822" y="905"/>
+  <use href="#candle" x="760" y="752"/>
+  <text x="664" y="742" font-size="12" fill="#ffe08a">vela 2 · dash</text>
+  <use href="#candle" x="340" y="900"/>
+  <text x="352" y="896" font-size="12" fill="#ffe08a">vela 3 · gancho</text>
+
+  <rect x="860" y="700" width="200" height="410" rx="10" fill="#22262c" stroke="#b98cff" stroke-width="2"/>
+  <rect x="872" y="840" width="10" height="70" fill="url(#metal)"/>
+  <rect x="1038" y="940" width="10" height="60" fill="url(#metal)"/>
+  <use href="#spikes" x="1048" y="790" transform="rotate(-90 1048 790)"/>
+  <text x="878" y="728" font-size="18" font-weight="700" fill="#b98cff">2 · POÇO</text>
+  <text x="878" y="748" font-size="13" fill="#9aa3ad">habilidade: parede</text>
+  <text x="878" y="780" font-size="13" fill="#d7dbe0">A · altar na base</text>
+  <text x="890" y="800" font-size="13" fill="#d7dbe0">P · poço de tijolo,</text>
+  <text x="890" y="818" font-size="13" fill="#d7dbe0">3 tiles de largura</text>
+  <text x="890" y="860" font-size="13" fill="#d7dbe0">V · trechos de metal</text>
+  <text x="890" y="878" font-size="13" fill="#d7dbe0">que não seguram</text>
+  <text x="890" y="900" font-size="13" fill="#d7dbe0">V · espinhos nas</text>
+  <text x="890" y="918" font-size="13" fill="#d7dbe0">paredes</text>
+  <use href="#scroll" x="960" y="1094"/>
+  <use href="#lamp" x="1030" y="1094"/>
+
+  <rect x="130" y="1130" width="390" height="200" rx="10" fill="#22262c" stroke="#c8c8c8" stroke-width="2"/>
+  <text x="150" y="1158" font-size="18" font-weight="700" fill="#e6e6e6">0 · FUNDO</text>
+  <text x="150" y="1178" font-size="13" fill="#9aa3ad">movimento base</text>
+  <text x="150" y="1210" font-size="13" fill="#d7dbe0">A · chão plano e degrau de 1 tile</text>
+  <text x="150" y="1230" font-size="13" fill="#d7dbe0">P · vãos de 2 e 3 tiles sobre chão raso</text>
+  <text x="150" y="1250" font-size="13" fill="#d7dbe0">V · primeiros espinhos, bem iluminados</text>
+  <use href="#lamp" x="160" y="1314"/>
+  <use href="#spikes" x="380" y="1314"/>
+  <rect x="400" y="1160" width="90" height="8" fill="#8d7a66"/>
+  <use href="#candle" x="450" y="1160"/>
+  <text x="404" y="1186" font-size="12" fill="#ffe08a">vela 0 · pulo duplo</text>
+
+  <rect x="540" y="1130" width="520" height="200" rx="10" fill="#22262c" stroke="#7fb3ff" stroke-width="2"/>
+  <text x="560" y="1158" font-size="18" font-weight="700" fill="#7fb3ff">1 · CISTERNA</text>
+  <text x="560" y="1178" font-size="13" fill="#9aa3ad">habilidade: pulo duplo</text>
+  <text x="560" y="1210" font-size="13" fill="#d7dbe0">A · altar logo na entrada</text>
+  <text x="560" y="1230" font-size="13" fill="#d7dbe0">P · parede de 4 tiles (só passa com pulo duplo)</text>
+  <text x="560" y="1250" font-size="13" fill="#d7dbe0">V · escada de plataformas sobre água tóxica</text>
+  <use href="#scroll" x="600" y="1314"/>
+  <rect x="642" y="1264" width="14" height="52" fill="#8d7a66"/>
+  <text x="660" y="1296" font-size="11" fill="#9aa3ad">4 tiles</text>
+  <use href="#lamp" x="556" y="1314"/>
+  <rect x="700" y="1300" width="200" height="16" fill="#4caf50" opacity="0.7"/>
+  <rect x="720" y="1282" width="30" height="8" fill="#8d7a66"/>
+  <rect x="790" y="1270" width="30" height="8" fill="#8d7a66"/>
+  <rect x="860" y="1258" width="30" height="8" fill="#8d7a66"/>
+  <use href="#candle" x="1030" y="1170"/>
+  <text x="926" y="1198" font-size="12" fill="#ffe08a">vela 1 · parede</text>
+
+  <polyline points="106,1290 130,1290" fill="none" stroke="#ffd166" stroke-width="3"/>
+  <polyline points="520,1290 540,1290" fill="none" stroke="#ffd166" stroke-width="3" marker-end="url(#arrow)"/>
+  <polyline points="960,1130 960,1110" fill="none" stroke="#ffd166" stroke-width="3" marker-end="url(#arrow)"/>
+  <polyline points="860,800 840,800" fill="none" stroke="#ffd166" stroke-width="3" marker-end="url(#arrow)"/>
+  <polyline points="300,820 250,820 250,680" fill="none" stroke="#ffd166" stroke-width="3" marker-end="url(#arrow)"/>
+  <polyline points="710,560 740,560" fill="none" stroke="#ffd166" stroke-width="3" marker-end="url(#arrow)"/>
+  <polyline points="900,96 900,82" fill="none" stroke="#ffd166" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="36" y="1370" width="1028" height="132" rx="10" fill="#1d2126" stroke="#3a4048"/>
+  <text x="56" y="1398" font-size="15" font-weight="700" fill="#f2f4f6">Legenda</text>
+  <text x="140" y="1398" font-size="13" fill="#9aa3ad">A = apresentação · P = prática segura · V = variação · cada vela só é alcançada com a habilidade indicada</text>
+  <use href="#lamp" x="70" y="1450"/>
+  <text x="88" y="1444" font-size="13" fill="#d7dbe0">lamparina (checkpoint)</text>
+  <use href="#scroll" x="270" y="1446"/>
+  <text x="290" y="1444" font-size="13" fill="#d7dbe0">pergaminho (habilidade)</text>
+  <use href="#candle" x="480" y="1450"/>
+  <text x="494" y="1444" font-size="13" fill="#d7dbe0">vela (coletável)</text>
+  <polyline points="640,1440 680,1440" fill="none" stroke="#ffd166" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="690" y="1444" font-size="13" fill="#d7dbe0">caminho principal</text>
+  <use href="#spikes" x="56" y="1488"/>
+  <text x="100" y="1486" font-size="13" fill="#d7dbe0">espinhos</text>
+  <rect x="190" y="1474" width="40" height="12" fill="#4caf50" opacity="0.7"/>
+  <text x="240" y="1486" font-size="13" fill="#d7dbe0">água tóxica</text>
+  <use href="#steam" x="350" y="1490"/>
+  <text x="370" y="1486" font-size="13" fill="#d7dbe0">vapor em ritmo</text>
+  <rect x="490" y="1474" width="40" height="12" fill="url(#metal)"/>
+  <text x="540" y="1486" font-size="13" fill="#d7dbe0">metal (não segura)</text>
+  <rect x="680" y="1474" width="40" height="12" fill="#8d7a66"/>
+  <text x="730" y="1486" font-size="13" fill="#d7dbe0">pedra e tijolo (seguram)</text>
+</svg>

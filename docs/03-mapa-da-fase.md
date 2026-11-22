@@ -30,25 +30,7 @@ A tela mostra cerca de **30×17 tiles** (480×270 px).
 
 O Jack cai pelo bueiro até o fundo do esgoto e sobe de volta à superfície. A progressão é **de baixo para cima e do escuro para a luz**: cada área fica mais alta que a anterior, e a saída é a luz do dia entrando pelo bueiro.
 
-```
-                                   ☀ SAÍDA (bueiro)
-                                  ┌──────────────┐
-                                  │ 5. Saída     │ desafio final
-                     ┌────────────┴──────────────┤
-                     │ 4. Galeria do gancho      │ tetos de pedra e metal
-         ┌───────────┴───────────┐               │
-         │ 3. Canal do vapor     │ dash          │
-         └───────────┬───────────┘               │
-                ┌────┴─────┐                     │
-                │ 2. Poço  │ parede (vertical)   │
-                └────┬─────┘                     │
-       ┌─────────────┴───────┐                   │
-       │ 1. Cisterna         │ pulo duplo        │
-       └─────────────┬───────┘                   │
-     ┌───────────────┴───┐                       │
-     │ 0. Fundo          │ queda e movimento base│
-     └───────────────────┘
-```
+![Mapa geral da fase](media/mapa-geral.svg)
 
 Duração-alvo: cerca de 1 minuto por área, de 6 a 8 minutos no total, mais o tempo de quem busca as velas.
 
