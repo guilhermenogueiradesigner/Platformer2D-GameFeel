@@ -26,6 +26,7 @@ namespace JackODrain.Player
         public bool IsGrounded => _isGrounded;
         public int FacingDirection { get; private set; } = 1;
         public Vector2 Velocity => _rigidbody.linearVelocity;
+        public CollisionSensor Sensor => _sensor;
 
         private void Awake()
         {
@@ -63,11 +64,6 @@ namespace JackODrain.Player
             velocity.y = ResolveCeiling(velocity.y, deltaTime);
 
             _rigidbody.linearVelocity = velocity;
-        }
-
-        public bool IsStandingAwayFromEdges(float edgeClearance)
-        {
-            return _isGrounded && _sensor.HasGroundBeyondBothFeet(edgeClearance);
         }
 
         private void ConfigurePhysicsBody(BoxCollider2D body)

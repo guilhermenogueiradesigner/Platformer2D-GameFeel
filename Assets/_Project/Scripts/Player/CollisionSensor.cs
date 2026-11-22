@@ -11,6 +11,8 @@ namespace JackODrain.Player
         private readonly BoxCollider2D _body;
         private readonly LayerMask _solidLayers;
 
+        public float HalfWidth => _body.bounds.extents.x;
+
         public CollisionSensor(BoxCollider2D body, LayerMask solidLayers)
         {
             _body = body;
@@ -22,15 +24,30 @@ namespace JackODrain.Player
             return CastFrom(_body.bounds.center, Vector2.down, ProbeDistance);
         }
 
-        public bool HasGroundBeyondBothFeet(float edgeClearance)
+        public bool HasGroundUnderBothFeet()
         {
             Bounds bounds = _body.bounds;
-            float rayLength = ProbeDistance * 2f;
+            return HasGroundBelow(bounds.min.x) && HasGroundBelow(bounds.max.x);
+        }
 
-            bool leftSupported = Physics2D.Raycast(new Vector2(bounds.min.x - edgeClearance, bounds.min.y), Vector2.down, rayLength, _solidLayers);
-            bool rightSupported = Physics2D.Raycast(new Vector2(bounds.max.x + edgeClearance, bounds.min.y), Vector2.down, rayLength, _solidLayers);
+        public float FreeGroundBeyondFoot(int direction, float maxDistance)
+        {
+            Bounds bounds = _body.bounds;
+            float footX = direction > 0 ? bounds.max.x : bounds.min.x;
+            float reachableDistance = Mathf.Min(maxDistance, DistanceToWall(direction, maxDistance));
+            float walkedDistance = 0f;
 
-            return leftSupported && rightSupported;
+            while (walkedDistance + PixelGrid.UnitsPerPixel <= reachableDistance)
+            {
+                float nextDistance = walkedDistance + PixelGrid.UnitsPerPixel;
+
+                if (!HasGroundBelow(footX + direction * nextDistance))
+                    break;
+
+                walkedDistance = nextDistance;
+            }
+
+            return walkedDistance;
         }
 
         public bool IsBlockedAbove(float upwardDistance)
@@ -59,6 +76,20 @@ namespace JackODrain.Player
 
             horizontalShift = 0f;
             return false;
+        }
+
+        private bool HasGroundBelow(float x)
+        {
+            Vector2 origin = new(x, _body.bounds.min.y);
+            return Physics2D.Raycast(origin, Vector2.down, ProbeDistance * 2f, _solidLayers);
+        }
+
+        private float DistanceToWall(int direction, float maxDistance)
+        {
+            Bounds bounds = _body.bounds;
+            Vector2 raisedSize = (Vector2)bounds.size - Vector2.up * (ProbeDistance * 2f);
+            RaycastHit2D hit = Physics2D.BoxCast(bounds.center, raisedSize, 0f, Vector2.right * direction, maxDistance, _solidLayers);
+            return hit ? hit.distance : maxDistance;
         }
 
         private bool IsClearAboveWithShift(float horizontalOffset, float upwardDistance)

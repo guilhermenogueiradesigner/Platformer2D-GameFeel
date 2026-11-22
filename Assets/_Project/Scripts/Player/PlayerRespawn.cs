@@ -9,11 +9,11 @@ namespace JackODrain.Player
         [Tooltip("Layers of everything that causes damage.")]
         [SerializeField] private LayerMask _hazardLayers;
 
-        [Tooltip("Tiles of solid ground required beyond each foot for a position to count as safe.")]
+        [Tooltip("Tiles kept between the player and the platform edges. Narrower platforms use their center.")]
         [SerializeField, Min(0f)] private float _edgeClearance = 0.5f;
 
         [Tooltip("Tiles of distance from any hazard for a position to count as safe.")]
-        [SerializeField, Min(0f)] private float _hazardClearance = 1f;
+        [SerializeField, Min(0f)] private float _hazardClearance = 0.5f;
 
         private Rigidbody2D _rigidbody;
         private BoxCollider2D _body;
@@ -47,8 +47,8 @@ namespace JackODrain.Player
 
         private void FixedUpdate()
         {
-            if (IsSafeToRemember())
-                _lastSafePosition = _rigidbody.position;
+            if (TryFindSafePosition(out Vector2 safePosition))
+                _lastSafePosition = safePosition;
         }
 
         public void SetCheckpoint(Vector2 position)
@@ -58,18 +58,35 @@ namespace JackODrain.Player
             _health.Refill();
         }
 
-        private bool IsSafeToRemember()
+        private bool TryFindSafePosition(out Vector2 safePosition)
         {
-            return !_health.IsInvulnerable
-                && _movement.IsStandingAwayFromEdges(_edgeClearance)
-                && !IsNearHazard();
+            safePosition = _rigidbody.position;
+            CollisionSensor sensor = _movement.Sensor;
+
+            if (_health.IsInvulnerable || !_movement.IsGrounded || !sensor.HasGroundUnderBothFeet())
+                return false;
+
+            float bodyCenterX = _body.bounds.center.x;
+            float measuringReach = 2f * (_edgeClearance + sensor.HalfWidth);
+            float safeCenterX = SafeGround.StandingPointAwayFromEdges(
+                bodyCenterX,
+                sensor.HalfWidth,
+                sensor.FreeGroundBeyondFoot(-1, measuringReach),
+                sensor.FreeGroundBeyondFoot(1, measuringReach),
+                _edgeClearance);
+
+            float shift = safeCenterX - bodyCenterX;
+            safePosition += Vector2.right * shift;
+
+            return !IsNearHazard(shift);
         }
 
-        private bool IsNearHazard()
+        private bool IsNearHazard(float horizontalShift)
         {
             Bounds bounds = _body.bounds;
+            Vector2 center = (Vector2)bounds.center + Vector2.right * horizontalShift;
             Vector2 searchSize = (Vector2)bounds.size + Vector2.one * (_hazardClearance * 2f);
-            return Physics2D.OverlapBox(bounds.center, searchSize, 0f, _hazardLayers) != null;
+            return Physics2D.OverlapBox(center, searchSize, 0f, _hazardLayers) != null;
         }
 
         private void ReturnToSafeGround()
