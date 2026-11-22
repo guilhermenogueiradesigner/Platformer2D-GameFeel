@@ -22,6 +22,17 @@ namespace JackODrain.Player
             return CastFrom(_body.bounds.center, Vector2.down, ProbeDistance);
         }
 
+        public bool HasGroundBeyondBothFeet(float edgeClearance)
+        {
+            Bounds bounds = _body.bounds;
+            float rayLength = ProbeDistance * 2f;
+
+            bool leftSupported = Physics2D.Raycast(new Vector2(bounds.min.x - edgeClearance, bounds.min.y), Vector2.down, rayLength, _solidLayers);
+            bool rightSupported = Physics2D.Raycast(new Vector2(bounds.max.x + edgeClearance, bounds.min.y), Vector2.down, rayLength, _solidLayers);
+
+            return leftSupported && rightSupported;
+        }
+
         public bool IsBlockedAbove(float upwardDistance)
         {
             return CastFrom(_body.bounds.center, Vector2.up, upwardDistance + ProbeDistance);

@@ -3,7 +3,8 @@
   "rootNamespace": "JackODrain.Level",
   "references": [
     "JackODrain.Core",
-    "JackODrain.Player"
+    "JackODrain.Player",
+    "Unity.RenderPipelines.Universal.2D.Runtime"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],

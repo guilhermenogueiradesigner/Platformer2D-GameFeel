@@ -65,6 +65,11 @@ namespace JackODrain.Player
             _rigidbody.linearVelocity = velocity;
         }
 
+        public bool IsStandingAwayFromEdges(float edgeClearance)
+        {
+            return _isGrounded && _sensor.HasGroundBeyondBothFeet(edgeClearance);
+        }
+
         private void ConfigurePhysicsBody(BoxCollider2D body)
         {
             _rigidbody.bodyType = RigidbodyType2D.Dynamic;

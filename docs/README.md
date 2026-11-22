@@ -19,7 +19,7 @@ Cada documento ganha link aqui quando for escrito.
 | [decisions/](decisions/) | Uma decisão importante por arquivo: contexto, opções, escolha e motivo |
 | [devlog/](devlog/) | Uma entrada por semana: o que mudou, por quê e o que vem depois |
 | [playtests/](playtests/) | Uma sessão de teste por arquivo: o que o teste mostrou e o que mudou |
-| [media/](media/) | Capturas, GIFs e diagramas usados nos documentos |
+| [media/](media/) | Capturas, GIFs e diagramas usados nos documentos. As capturas do jogo (F12) ficam em `media/capturas/` |
 | [creditos.md](creditos.md) | Assets de terceiros: autor, link e licença |
 
 ## Decisões
@@ -46,9 +46,17 @@ Cada documento ganha link aqui quando for escrito.
 | [0018](decisions/0018-arquitetura-do-movimento.md) | Arquitetura do movimento | 2026-11-21 |
 | [0019](decisions/0019-habilidades-vida-e-respawn-no-codigo.md) | Habilidades, vida e respawn no código | 2026-11-21 |
 | [0020](decisions/0020-camera-e-animacoes.md) | Câmera de plataforma e animações do Jack | 2026-11-21 |
+| [0021](decisions/0021-pecas-do-blockout.md) | Peças do blockout: velas, luzes, HUD e gerador de prefabs | 2026-11-22 |
+| [0022](decisions/0022-capturas-de-tela.md) | Capturas de tela durante o desenvolvimento | 2026-11-22 |
 
 ## Devlog
 
 | Semana | Período |
 | --- | --- |
 | [2026-S48](devlog/2026-S48.md) | 23/11 a 29/11 |
+
+## Playtests
+
+| Sessão | Data | Foco |
+| --- | --- | --- |
+| [01](playtests/2026-11-22-sessao-01.md) | 2026-11-22 | Peças do blockout e retorno ao chão seguro |

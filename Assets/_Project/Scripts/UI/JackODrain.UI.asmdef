@@ -1,0 +1,17 @@
+{
+  "name": "JackODrain.UI",
+  "rootNamespace": "JackODrain.UI",
+  "references": [
+    "JackODrain.Player",
+    "UnityEngine.UI"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

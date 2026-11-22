@@ -32,6 +32,7 @@ Resetar os corações no checkpoint faz cada área começar do mesmo jeito, e a 
 
 - A UI mínima mostra os 5 corações.
 - Cada área tem um checkpoint claro, sinalizado sem texto.
-- **Chão seguro:** a posição do Jack é salva sempre que ele está em cima de uma plataforma. Ao tomar dano, ele volta à última posição salva.
+- **Chão seguro:** a posição do Jack é salva quando ele está em cima de uma plataforma, com chão firme meio tile além de cada pé, a pelo menos 1 tile de qualquer armadilha e fora da invulnerabilidade. Ao tomar dano, ele volta à última posição salva.
 - **Invulnerabilidade ao reaparecer:** o Jack fica um instante sem receber dano, para o jogador se situar.
-- **A observar nos playtests:** se o Jack pisar na borda de uma plataforma ao lado de uma armadilha, ele pode reaparecer perto do perigo. A invulnerabilidade cobre esse caso; se o playtest mostrar que não basta, a regra é revista.
+- **Revisto no [playtest 01](../playtests/2026-11-22-sessao-01.md):** a regra original salvava na quina das plataformas e, durante a invulnerabilidade, em cima dos espinhos. As condições de borda, distância de armadilhas e invulnerabilidade foram acrescentadas por isso.
+- Plataformas muito estreitas ou cercadas de armadilhas não salvam posição. Nelas, o Jack volta ao último ponto seguro anterior.

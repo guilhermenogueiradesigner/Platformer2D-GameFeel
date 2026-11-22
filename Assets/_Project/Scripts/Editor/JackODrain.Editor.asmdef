@@ -1,0 +1,22 @@
+{
+  "name": "JackODrain.Editor",
+  "rootNamespace": "JackODrain.EditorTools",
+  "references": [
+    "JackODrain.Player",
+    "JackODrain.Level",
+    "JackODrain.UI",
+    "Unity.RenderPipelines.Universal.2D.Runtime",
+    "UnityEngine.UI"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

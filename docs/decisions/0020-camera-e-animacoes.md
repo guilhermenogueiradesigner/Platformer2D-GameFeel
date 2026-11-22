@@ -27,10 +27,10 @@ As animações usam o **Animator gerado pelo importador do Aseprite**. O `Player
 
 | Situação | Estado |
 | --- | --- |
-| No chão, parado | `idle` |
-| No chão, andando | `run` |
-| No ar, subindo | `jump` |
-| No ar, caindo | `fall` |
+| No chão, parado | `Idle` |
+| No chão, andando | `Run` |
+| No ar, subindo | `Jump` |
+| No ar, caindo | `Fall` |
 
 O sprite é espelhado conforme a direção do Jack.
 
@@ -44,6 +44,6 @@ O sprite é espelhado conforme a direção do Jack.
 
 - O módulo `JackODrain.Cameras` depende do Player.
 - O `PlayerMovement` passa a expor `FacingDirection`.
-- Os nomes das tags no Aseprite precisam ser `idle`, `run`, `jump` e `fall`. Se faltar algum estado, o `PlayerAnimator` avisa no Console.
+- Os nomes das tags no Aseprite precisam ser `Idle`, `Run`, `Jump` e `Fall`, com inicial maiúscula. Se faltar algum estado, o `PlayerAnimator` avisa no Console.
 - Os limites de câmera por área entram com o blockout.
 - O Pixel Perfect Camera continua valendo (decisão 0006).
