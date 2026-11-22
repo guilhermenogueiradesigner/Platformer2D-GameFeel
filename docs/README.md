@@ -44,6 +44,7 @@ Cada documento ganha link aqui quando for escrito.
 | [0016](decisions/0016-ajustes-das-mecanicas.md) | Ajustes das mecânicas, controles e câmera | 2026-11-21 |
 | [0017](decisions/0017-interface-e-audio.md) | Interface, menus e áudio | 2026-11-21 |
 | [0018](decisions/0018-arquitetura-do-movimento.md) | Arquitetura do movimento | 2026-11-21 |
+| [0019](decisions/0019-habilidades-vida-e-respawn-no-codigo.md) | Habilidades, vida e respawn no código | 2026-11-21 |
 
 ## Devlog
 

@@ -4,9 +4,11 @@ using UnityEngine;
 namespace JackODrain.Player
 {
     [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D), typeof(PlayerInputReader))]
+    [RequireComponent(typeof(PlayerAbilities))]
     public sealed class PlayerMovement : MonoBehaviour
     {
         private const float InputDeadZone = 0.01f;
+        private const float RestingSpeedTolerance = 0.05f;
 
         [SerializeField] private MovementSettings _settings;
         [SerializeField] private LayerMask _solidLayers;
@@ -16,8 +18,10 @@ namespace JackODrain.Player
 
         private Rigidbody2D _rigidbody;
         private PlayerInputReader _input;
+        private PlayerAbilities _abilities;
         private CollisionSensor _sensor;
         private bool _isGrounded;
+        private bool _hasAirJump;
 
         public bool IsGrounded => _isGrounded;
         public Vector2 Velocity => _rigidbody.linearVelocity;
@@ -26,6 +30,7 @@ namespace JackODrain.Player
         {
             _rigidbody = GetComponent<Rigidbody2D>();
             _input = GetComponent<PlayerInputReader>();
+            _abilities = GetComponent<PlayerAbilities>();
 
             BoxCollider2D body = GetComponent<BoxCollider2D>();
             _sensor = new CollisionSensor(body, _solidLayers);
@@ -52,7 +57,7 @@ namespace JackODrain.Player
             UpdateGroundedState(velocity.y);
 
             velocity.x = NextHorizontalSpeed(velocity.x, deltaTime);
-            velocity.y = CanJump() ? Jump() : NextVerticalSpeed(velocity.y, deltaTime);
+            velocity.y = NextVerticalSpeed(velocity.y, deltaTime);
             velocity.y = ResolveCeiling(velocity.y, deltaTime);
 
             _rigidbody.linearVelocity = velocity;
@@ -78,7 +83,10 @@ namespace JackODrain.Player
         private void UpdateGroundedState(float verticalSpeed)
         {
             bool wasGrounded = _isGrounded;
-            _isGrounded = verticalSpeed <= 0f && _sensor.IsTouchingGround();
+            _isGrounded = verticalSpeed <= RestingSpeedTolerance && _sensor.IsTouchingGround();
+
+            if (_isGrounded)
+                _hasAirJump = true;
 
             if (wasGrounded && !_isGrounded)
                 _coyoteTime.Start(_settings.CoyoteTime);
@@ -103,6 +111,17 @@ namespace JackODrain.Player
 
         private float NextVerticalSpeed(float verticalSpeed, float deltaTime)
         {
+            if (CanGroundJump())
+                return LaunchGroundJump();
+
+            if (CanAirJump())
+                return LaunchAirJump();
+
+            return ApplyGravity(verticalSpeed, deltaTime);
+        }
+
+        private float ApplyGravity(float verticalSpeed, float deltaTime)
+        {
             float gravity = _settings.Gravity * GravityMultiplierFor(verticalSpeed);
             return Mathf.Max(verticalSpeed - gravity * deltaTime, -_settings.MaxFallSpeed);
         }
@@ -123,17 +142,34 @@ namespace JackODrain.Player
             _jumpBuffer.Start(_settings.JumpBufferTime);
         }
 
-        private bool CanJump()
+        private bool CanGroundJump()
         {
             return _jumpBuffer.IsRunning && (_isGrounded || _coyoteTime.IsRunning);
         }
 
-        private float Jump()
+        private bool CanAirJump()
+        {
+            return _jumpBuffer.IsRunning && _hasAirJump && _abilities.Has(Ability.DoubleJump);
+        }
+
+        private float LaunchGroundJump()
+        {
+            ConsumeJumpInput();
+            return _settings.JumpLaunchSpeed;
+        }
+
+        private float LaunchAirJump()
+        {
+            ConsumeJumpInput();
+            _hasAirJump = false;
+            return _settings.DoubleJumpLaunchSpeed;
+        }
+
+        private void ConsumeJumpInput()
         {
             _isGrounded = false;
             _coyoteTime.Stop();
             _jumpBuffer.Stop();
-            return _settings.JumpLaunchSpeed;
         }
 
         private float ResolveCeiling(float verticalSpeed, float deltaTime)

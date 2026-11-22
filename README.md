@@ -21,7 +21,8 @@ Code lives in `Assets/_Project/Scripts/`, one assembly per module:
 | Module | Content |
 | --- | --- |
 | `JackODrain.Core` | Small reusable pieces (`Countdown`, `PixelGrid`) |
-| `JackODrain.Player` | Movement: settings, input, collision sensing and the movement rules |
+| `JackODrain.Player` | Movement, abilities, health and respawn |
+| `JackODrain.Level` | Things the player meets: hazards, ability scrolls, checkpoints. Depends on Player, never the other way around |
 
 Movement uses a dynamic `Rigidbody2D` with custom gravity. Jumps are defined by height in tiles and time to apex, so level metrics and code use the same numbers. All tuning values live in a `MovementSettings` asset. Pure logic is covered by EditMode tests in `Assets/_Project/Tests/`. Design reasoning: [docs/decisions/0018](docs/decisions/0018-arquitetura-do-movimento.md).
 

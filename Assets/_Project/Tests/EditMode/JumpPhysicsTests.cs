@@ -31,5 +31,16 @@ namespace JackODrain.Tests
 
             Assert.AreEqual(timeToApex, apexTime, Tolerance);
         }
+
+        [TestCase(2f, 48.98f)]
+        [TestCase(1f, 30f)]
+        public void LaunchUnderExistingGravityReachesTheRequestedHeight(float jumpHeight, float gravity)
+        {
+            float launchSpeed = JumpPhysics.LaunchSpeedUnderGravity(jumpHeight, gravity);
+
+            float apexHeight = launchSpeed * launchSpeed / (2f * gravity);
+
+            Assert.AreEqual(jumpHeight, apexHeight, Tolerance);
+        }
     }
 }

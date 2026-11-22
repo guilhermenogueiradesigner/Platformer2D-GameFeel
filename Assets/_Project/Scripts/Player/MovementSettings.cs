@@ -37,6 +37,10 @@ namespace JackODrain.Player
         [Tooltip("Tiles per second.")]
         [SerializeField, Min(0f)] private float _maxFallSpeed = 18f;
 
+        [Header("Double Jump")]
+        [Tooltip("Tiles gained by the second jump, measured from where it starts.")]
+        [SerializeField, Min(0.1f)] private float _doubleJumpHeight = 2f;
+
         [Header("Forgiveness")]
         [Tooltip("Seconds a jump is still allowed after leaving a ledge.")]
         [SerializeField, Min(0f)] private float _coyoteTime = 0.1f;
@@ -61,5 +65,6 @@ namespace JackODrain.Player
 
         public float Gravity => JumpPhysics.GravityFor(_jumpHeight, _timeToJumpApex);
         public float JumpLaunchSpeed => JumpPhysics.LaunchSpeedFor(_jumpHeight, _timeToJumpApex);
+        public float DoubleJumpLaunchSpeed => JumpPhysics.LaunchSpeedUnderGravity(_doubleJumpHeight, Gravity);
     }
 }

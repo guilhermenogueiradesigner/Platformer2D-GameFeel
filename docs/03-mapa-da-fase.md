@@ -13,7 +13,7 @@ Valores-alvo iniciais, validados no blockout:
 
 | Movimento | Altura máxima | Distância máxima | Regra para o level design |
 | --- | --- | --- | --- |
-| Pulo | 3 tiles | 4 tiles | Obstáculo de 4 tiles de altura = "não dá só com o pulo" |
+| Pulo ✅ | 3 tiles | 4 tiles | Obstáculo de 4 tiles de altura = "não dá só com o pulo" |
 | Pulo + pulo duplo | 5 tiles | 7 tiles | Obstáculo de 5 tiles = "precisa do pulo duplo" |
 | Dash | — | 5 tiles | Vão de 6 a 8 tiles = "precisa do dash" |
 | Pulo duplo + dash | 5 tiles | 11 tiles | Vão de 9 a 11 tiles = combinação |
@@ -21,6 +21,8 @@ Valores-alvo iniciais, validados no blockout:
 | Poço de parede | — | 3 a 4 tiles de largura | Estreito o bastante para alternar paredes |
 
 A tela mostra cerca de **30×17 tiles** (480×270 px).
+
+✅ = confirmado jogando na cena `MetricsTest` (21/11/2026: a parede de 3 tiles passa só com o pulo, a de 4 não).
 
 ---
 

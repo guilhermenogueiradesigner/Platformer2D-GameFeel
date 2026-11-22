@@ -1,0 +1,17 @@
+{
+  "name": "JackODrain.Level",
+  "rootNamespace": "JackODrain.Level",
+  "references": [
+    "JackODrain.Core",
+    "JackODrain.Player"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

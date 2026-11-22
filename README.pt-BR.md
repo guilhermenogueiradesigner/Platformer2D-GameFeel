@@ -21,7 +21,8 @@ O código fica em `Assets/_Project/Scripts/`, com um assembly por módulo:
 | Módulo | Conteúdo |
 | --- | --- |
 | `JackODrain.Core` | Peças pequenas e reutilizáveis (`Countdown`, `PixelGrid`) |
-| `JackODrain.Player` | Movimento: ajustes, entrada, sensores de colisão e regras do movimento |
+| `JackODrain.Player` | Movimento, habilidades, vida e respawn |
+| `JackODrain.Level` | O que o jogador encontra: armadilhas, pergaminhos, lamparinas. Depende do Player, nunca o contrário |
 
 O movimento usa um `Rigidbody2D` dinâmico com gravidade própria. O pulo é definido por altura em tiles e tempo até o ponto mais alto, então as métricas da fase e o código usam os mesmos números. Todos os valores de ajuste ficam num asset `MovementSettings`. A lógica pura tem testes EditMode em `Assets/_Project/Tests/`. Motivos: [docs/decisions/0018](docs/decisions/0018-arquitetura-do-movimento.md).
 
